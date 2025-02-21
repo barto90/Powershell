@@ -1,4 +1,4 @@
-unction Test-ADCredentials {
+function Test-ADCredentials {
     param(
         [Parameter(Mandatory=$true)]
         [string]$Username,
