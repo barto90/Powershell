@@ -1,0 +1,23 @@
+# GraphQL Schema Definition
+type User {
+  name: String!
+  email: String!
+  phone: String!
+}
+
+type Query {
+  users: [User!]!
+  user(email: String!): User
+}
+
+input AddUserInput {
+  name: String!
+  email: String!
+  phone: String!
+}
+
+type Mutation {
+  addUser(input: AddUserInput!): User!
+  updateUser(email: String!, input: AddUserInput!): User!
+  deleteUser(email: String!): Boolean!
+} 
